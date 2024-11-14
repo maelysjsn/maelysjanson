@@ -1,0 +1,132 @@
+/* Importation de la police LEMONMILK en .otf pour le reste du site */
+@font-face {
+    font-family: 'LEMONMILK';
+    src: url('fonts/LEMONMILK.otf') format('opentype'); /* Utilisation du format .otf */
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Importation de la police OLIVER en .ttf uniquement pour le logo */
+@font-face {
+    font-family: 'OLIVER';
+    src: url('fonts/OLIVER.ttf') format('truetype'); /* Utilisation du format .ttf */
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Réinitialisation des marges et des paddings par défaut */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'LEMONMILK', sans-serif; /* Applique LEMONMILK sur tout le corps */
+    background-color: #F7F3F0; /* Couleur de fond très légère */
+    color: #333; /* Couleur de texte par défaut */
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #DCE4D2; /* Bande verte claire en haut */
+    height: 150px; /* Donne une hauteur au header pour centrer verticalement */
+    position: relative; /* Permet d'absolument positionner des éléments à l'intérieur */
+}
+
+/* Centrage horizontal des éléments dans le header */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px; /* Limiter la largeur maximale du contenu */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #D98D8A; /* Couleur rose pour le texte */
+    font-size: 18px;
+    font-weight: bold;
+    font-family: 'LEMONMILK', sans-serif; /* Appliquer LEMONMILK dans le menu */
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Centrage des éléments gauche et droite */
+.nav-left {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-right {
+    display: flex;
+    gap: 30px;
+}
+
+/* Centrage du logo */
+.logo {
+    font-family: 'OLIVER', sans-serif; /* Utilise OLIVER pour le logo */
+    color: #C3C6A4; /* Couleur verte claire pour "Maëlys Janson" */
+    font-size: 36px;
+    position: absolute; /* Positionnement absolu pour centrer au milieu */
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%); /* Centre le logo */
+}
+/* Styles pour le carrousel */
+.carousel {
+    position: relative; /* Positionnement relatif pour les boutons */
+    max-width: 100%; /* Limite la largeur */
+    overflow: hidden; /* Masque les images qui débordent */
+}
+
+.carousel-images {
+    display: flex; /* Dispose les images horizontalement */
+    transition: transform 0.5s ease; /* Animation de transition pour le changement d'image */
+}
+
+.carousel-images img {
+    width: 100%; /* Chaque image prend toute la largeur */
+    min-width: 100%; /* S'assure que l'image fait au moins 100% de la largeur */
+}
+
+.prev, .next {
+    position: absolute; /* Positionnement absolu pour les boutons */
+    top: 50%;
+    transform: translateY(-50%); /* Centre les boutons verticalement */
+    background-color: rgba(255, 255, 255, 0.7); /* Fond légèrement transparent */
+    border: none; /* Supprime la bordure */
+    cursor: pointer; /* Change le curseur au survol */
+    font-size: 24px; /* Taille des flèches */
+    padding: 10px; /* Espace intérieur */
+}
+
+.prev {
+    left: 10px; /* Bouton gauche */
+}
+
+.next {
+    right: 10px; /* Bouton droit */
+}
+
+.portfolio-title {
+    font-family: 'LEMONMILK', sans-serif,; /* Applique LEMONMILK pour le titre */
+    color: #000000; /* Couleur rose pour le texte */
+    font-size: 36px; /* Taille de police */
+    text-align: center; /* Centre le texte */
+    margin-bottom: 20px; /* Espace en dessous du titre */
+}
+
