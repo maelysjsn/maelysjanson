@@ -3,54 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Maëlys Janson</title>
+    <title>Portfolio - Maëlys Janson</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="preload" href="Oliver.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+    <link rel="preload" href="LEMONMILK.otf" as="font" type="font/otf" crossorigin="anonymous">
 </head>
 <body>
-
+   
     <header>
-        <nav>
-            <!-- Liens de gauche -->
-            <ul class="nav-left">
-                <li><a href="#">Accueil</a></li>
-                <li><a href="#">Portfolio</a></li>
-            </ul>
-
- <!-- Logo au centre -->
-            <div class="logo">
-                <h1>Maëlys Janson</h1>
-            </div>
-
-   <!-- Liens de droite -->
-            <ul class="nav-right">
-                <li><a href="#">À propos</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </nav>
+        <button class="hamburger" onclick="toggleMenu()">☰</button>
+        <div class="nav-container">
+            <h1 class="logo">Maëlys<br>Janson</h1>
+            <nav>
+                <ul>
+                    <li><a href="#portfolio">PORTFOLIO</a></li>
+                    <li><a href="#about">À PROPOS</a></li>
+                    <li><a href="#contact">CONTACT</a></li>
+                    <li><a href="#cv">MON CV</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
+
+    <main>
+        <section id="portfolio">
+            <h2>PORTFOLIO</h2>
+            <div class="grid-container">
+                <div class="grid-item">
+                    <img src="images/le-soleil.jpeg" alt="Le soleil">
+                    <p>AFFICHES</p>
+                </div>
+                <div class="grid-item">
+                    <img src="images/kusmi-tea.jpeg" alt="Kusmi Tea">
+                    <p>PACKAGING</p>
+                </div>
+                <div class="grid-item wide">
+                    <img src="images/ronron.jpeg" alt="Ronron">
+                    <p>CHARTES GRAPHIQUES</p>
+                </div>
+                <div class="grid-item">
+                    <img src="images/zestee.jpeg" alt="logos">
+                    <p>LOGOS</p>
+                </div>
+                <div class="grid-item">
+                    <img src="images/photo.jpeg" alt="Photographies">
+                    <p>PHOTOGRAPHIES</p>
+                </div>
+                <div class="grid-item wide">
+                    <img src="images/miel.jpeg" alt="es">
+                    <p>AUTRES</p>
+                   
+                        </div>
+                    </section>
+                    
+                </div>
+            </div>
+        </section>
+    </main>
+
+   
+    <footer>
+        <p>© Tous droits réservés - Maëlys JANSON</p>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const nav = document.querySelector("nav ul");
+            nav.classList.toggle("show");
+        }
+    </script>
 </body>
 </html>
-<body>
-    <header>
-        <!-- ... Code du header ... -->
-    </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <h2 class="portfolio-title">PORTFOLIO</h2>
-            <div class="carousel">
-                <div class="carousel-images">
-                    <img src="path/to/your/image1.jpg" alt="Description image 1" />
-                    <img src="path/to/your/image2.jpg" alt="Description image 2" />
-                    <img src="path/to/your/image3.jpg" alt="Description image 3" />
-                </div>
-                <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
-                <button class="next" onclick="moveSlide(1)">&#10095;</button>
-            </div>
-        </div>
-    </section>
 
-    <script src="script.js"></script> <!-- Lien vers le fichier JavaScript -->
-</body>
